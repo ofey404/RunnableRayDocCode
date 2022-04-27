@@ -1,7 +1,10 @@
 Runnable Ray Documentation Code
 ===============================
 
+> NOTE: Working on Ray 1.12.0.
+
 Grab-and-runnable scripts, reorganized from [Ray documentation](https://docs.ray.io/en/latest/).
+
 
 ## Contents
 
