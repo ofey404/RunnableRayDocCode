@@ -1,4 +1,4 @@
-#!/home/lccww/.conda/envs/conda-env/bin/python
+#!/bin/env python
 
 # https://docs.ray.io/en/latest/ray-core/tasks/using-ray-with-gpus.html
 
