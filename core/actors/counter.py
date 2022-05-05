@@ -4,6 +4,10 @@
 
 import ray
 
+# An actor is essentially a stateful worker (or a service). 
+# When a new actor is instantiated, a new worker is created, 
+# and methods of the actor are scheduled on that specific 
+# worker and can access and mutate the state of that worker.
 
 @ray.remote
 class Counter(object):

@@ -2,6 +2,11 @@
 
 # https://docs.ray.io/en/latest/ray-core/tasks.html
 
+# Ray enables arbitrary functions to be executed 
+# asynchronously on separate Python workers. These
+# asynchronous Ray functions are called “remote 
+# functions”. Here is an example.
+
 import ray
 import time
 

@@ -2,6 +2,12 @@
 
 # https://docs.ray.io/en/latest/ray-core/tasks.html
 
+# After launching a number of tasks, you may want to
+# know which ones have finished executing without 
+# blocking on all of them, as in ray.get. This can 
+# be done with wait (ray.wait). The function works 
+# as follows.
+
 import ray
 import time
 

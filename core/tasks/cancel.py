@@ -2,6 +2,9 @@
 
 # https://docs.ray.io/en/latest/ray-core/tasks.html
 
+# Remote functions can be canceled by calling ray.cancel 
+# (docstring) on the returned Object ref.
+
 import ray
 import time
 

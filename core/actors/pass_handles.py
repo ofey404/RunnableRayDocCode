@@ -7,6 +7,11 @@ import time
 
 from counter import Counter
 
+# ## Passing Around Actor Handles
+# 
+# Actor handles can be passed into other tasks. We can
+# define remote functions (or actor methods) that use
+# actor handles.
 
 @ray.remote
 def f(counter):

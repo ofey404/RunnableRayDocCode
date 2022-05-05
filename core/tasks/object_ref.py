@@ -2,6 +2,11 @@
 
 # https://docs.ray.io/en/latest/ray-core/tasks.html
 
+# Object refs can also be passed into remote functions.
+# When the function actually gets executed, the argument
+# will be passed as the underlying Python value. For 
+# example, take this function:
+
 import ray
 import time
 

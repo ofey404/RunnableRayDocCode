@@ -13,11 +13,29 @@ def use_gpu():
     print("CUDA_VISIBLE_DEVICES: {}".format(os.environ["CUDA_VISIBLE_DEVICES"]))
 
 
+# ## Share GPU resource
+# 
+# If you want two tasks to share the same GPU, 
+# then the tasks can each request half (or some
+# other fraction) of a GPU.
+# 
+# It is the developer’s responsibility to make
+# sure that the individual tasks don’t use more
+# than their share of the GPU memory. 
+
 @ray.remote(num_gpus=0.25)
 def fractional_gpu():
     # It is the developer’s responsibility to make sure that the individual
     # tasks don’t use more than their share of the GPU memory. 
     time.sleep(1)
+
+
+# ## How to release GPU resource
+# 
+# Setting max_calls=1 in the remote decorator,
+# so that the worker automatically exits after 
+# executing the task (thereby releasing the GPU
+# resources).
 
 worker_not_release_gpu = False
 if worker_not_release_gpu:  # Use max_calls=1.

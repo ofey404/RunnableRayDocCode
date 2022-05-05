@@ -9,6 +9,10 @@ import time
 
 ray.init(ignore_reinit_error=True)
 
+# If a worker dies unexpectedly, Ray will rerun the task 
+# until either the task succeeds or the maximum number of
+# retries is exceeded. 
+
 @ray.remote(max_retries=1)
 def potentially_fail(failure_probability):
     time.sleep(0.2)
